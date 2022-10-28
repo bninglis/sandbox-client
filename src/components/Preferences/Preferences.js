@@ -46,7 +46,7 @@ export default function Preferences() {
             const contactTimeOutput = checkedTime.join(", ");
             sessionStorage.setItem("contactMethods", contactMethodsOutput);
             sessionStorage.setItem("contactTime", contactTimeOutput);
-            navigate("/preferences");
+            navigate("/recommendations");
         }
     };
     return (
