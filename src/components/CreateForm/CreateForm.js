@@ -29,20 +29,26 @@ export default function CreateForm() {
         <>
             <form className="create" ref={formRef} onSubmit={handleSubmit}>
                 <div className="create__names">
-                    <input className="create__field" type="text" name="firstname" id="firstname" placeholder="First Name" />
-                    <input className="create__field" type="text" name="lastname" id="lastname" placeholder="Last Name" />
+                    <input className="create__field create__field-top" type="text" name="firstname" id="firstname" placeholder="First Name" />
+                    <input className="create__field create__field-top" type="text" name="lastname" id="lastname" placeholder="Last Name" />
                 </div>
                 <div className="create__digital">
-                    <input className="create__field" type="text" name="username" id="username" placeholder="Username" />
-                    <input className="create__field" type="email" name="email" id="email" placeholder="Email" />
+                    <input className="create__field create__field-top" type="text" name="username" id="username" placeholder="Username" />
+                    <input className="create__field create__field-top" type="email" name="email" id="email" placeholder="Email" />
                 </div>
+                <div className="create__field-middle">
                 <input className="create__field" type="text" name="company" id="company" placeholder="What is your company name?" />
                 <input className="create__field" type="password" name="password" placeholder="Password" />
+
+                </div>
+                <div className="create__field-bottom">
                 <input className="create__check" type="checkbox" name="agree" defaultValue={false} />
                 <label htmlFor="agree" className="create__label">
                     I agree to the <span className="bold">Terms and Conditions</span>
                 </label>
                 <button className="create__submit">Sign Up</button>
+                </div>
+                
             </form>
             <p>
                 Already have and account? <a>Log in</a>
