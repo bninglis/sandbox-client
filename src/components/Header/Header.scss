@@ -1,0 +1,19 @@
+@use "../../styles/_partials/variables" as *;
+@use "../../styles/_partials/typography" as *;
+
+.sandbox-header {
+  text-align: center;
+  padding: 81px;
+  background: url(../../assets/images/speckled-background.svg);
+}
+
+.header {
+  &-logo {
+    width: 310px;
+    margin-right: -9px;
+  }
+  &-title {
+    font-size: 20px;
+   
+  }
+}
