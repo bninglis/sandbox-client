@@ -1,5 +1,5 @@
 import "./Interests.scss";
-import FormProgress from "../FormSlider/FormProgress";
+import FormProgressInterests from "../FormProgressInterests/FormProgressInterests";
 import { useState } from "react";
 
 const artInterestArray = { title: "Arts", array: ["Crafts", "Dance", "Drawing", "Painting", "Photography", "Singing"] };

@@ -1,9 +1,11 @@
-import FormProgress from "../FormSlider/FormProgress";
+import FormProgressPrefs from "../FormProgressPrefs/FormProgressPrefs";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const checkedDefault = { messaging: false, video: false, voice: false, irl: false, scheduled: false, spontaneous: false };
 
 export default function Preferences() {
+    const navigate = useNavigate();
     function findCommonElements(arr1, arr2) {
         return arr1.some((item) => arr2.includes(item));
     }
@@ -43,6 +45,7 @@ export default function Preferences() {
             const contactTimeOutput = checkedTime.join(", ");
             sessionStorage.setItem("contactMethods", contactMethodsOutput);
             sessionStorage.setItem("contactTime", contactTimeOutput);
+            navigate("/preferences");
         }
     };
     return (
