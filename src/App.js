@@ -10,7 +10,7 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<SignupPage />} />
+                    <Route path="/" element={<Background />} />
                     <Route path="/background-info" element={<Background />} />
                     {/* <Route path="/interests" element={<Interests />} /> */}
                     {/* <Route path="/interests" element={<Interests />} /> */}
