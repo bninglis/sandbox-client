@@ -1,5 +1,6 @@
 import "./recommendations-card.scss";
 
+
 function Recommendations(props) {
   return (
     // "recom" short for recommendation
