@@ -1,0 +1,10 @@
+@use "../../styles/_partials/variables" as *;
+@use "../../styles/_partials/typography" as *;
+
+.preferences {
+  &-page {
+    background-color: $tan;
+    height: 50vh;
+    padding:1rem ;
+  }
+}

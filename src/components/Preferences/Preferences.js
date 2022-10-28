@@ -1,5 +1,7 @@
-import FormProgress from "../FormSlider/FormProgress";
+import FormProgressPrefs from "../FormSlider/FormProgressPrefs";
 import { useState } from "react";
+import Header from "../Header/Header";
+import "./Preferences.scss"
 
 const checkedDefault = { messaging: false, video: false, voice: false, irl: false, scheduled: false, spontaneous: false };
 
@@ -47,7 +49,10 @@ export default function Preferences() {
     };
     return (
         <>
-            <h1 className="followup__title">Preferences</h1>
+        <Header/>
+        <div className="preferences-page">
+            <FormProgressPrefs/>
+        <h1 className="followup__title">Preferences</h1>
             <form className="preferences" onSubmit={handleSubmit}>
                 <div className="preferences__input">
                     <div className="preferences__fields">
@@ -81,10 +86,12 @@ export default function Preferences() {
                         </label>
                     </div>
                 </div>
-                <button className="followup__submit" type="submit">
+                <button className="followup__submit preferences-submit" type="submit">
                     Submit
                 </button>
             </form>
+        </div>
+           
         </>
     );
 }
