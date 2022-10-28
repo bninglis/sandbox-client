@@ -1,0 +1,35 @@
+@use "../../styles/_partials/variables" as *;
+@use "../../styles/_partials/typography" as *;
+
+.card {
+  background-color: $tan;
+  width: 341px;
+  height: 493px;
+  // padding: 10rem;
+  margin: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__icon {
+    background-color: $yellow;
+    object-fit:cover;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+  }
+}
+
+.card-desc-text {
+  font-size: 16px;
+}
+
+.card-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card-button {
+  margin-top: 2rem;
+  width: 80%;
+}
