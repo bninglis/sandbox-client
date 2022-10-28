@@ -1,5 +1,6 @@
 import FormProgress from "../FormSlider/FormProgress";
 import { useState } from "react";
+import Header from "../Header/Header";
 
 export default function Background() {
     const [isFormValid, setIsFormValid] = useState();
@@ -18,6 +19,7 @@ export default function Background() {
     };
     return (
         <>
+        <Header/>
             <h1 className="followup__title">Background</h1>
             <form className="background" onSubmit={handleSubmit}>
                 <div className="background__input">
