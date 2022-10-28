@@ -51,7 +51,7 @@ export default function Background() {
                         </label>
                     </div>
                 </div>
-                <button className="background__submit" type="submit">
+                <button className="followup__submit" type="submit">
                     Next
                 </button>
             </form>
