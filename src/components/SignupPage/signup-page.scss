@@ -2,47 +2,44 @@
 @use "../../styles/_partials/typography" as *;
 
 .signup {
-  &-page {
-    display: flex;
-    position: relative;
-    // padding: 138px 71px 62px 131px;
-  }
-  &-logo {
-    width: 310px;
-    height: auto;
-    position: absolute;
-    top: 3rem;
-  }
-  &-icon {
-    height: 222px;
-    width: 222px;
-    position: absolute;
-    top: 17rem;
-  }
-  &-subtitle {
-    font-size: 16px;
-    position: absolute;
-    top: 36rem;
-  }
-  &-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    height: 100vh;
-    // margin-right:203px ;
-  }
-  &-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    height: 100vh;
-    background: $tan;
-    &__title{
-      font-family:$poppins-semi;
+    &-page {
+        display: flex;
+        position: relative;
+        // padding: 138px 71px 62px 131px;
     }
-  }
+    &-logo {
+        width: 310px;
+        height: auto;
+        margin-bottom: 15.9rem;
+    }
+    &-icon {
+        height: 222px;
+        width: 222px;
+        margin-bottom: 9.6rem;
+    }
+    &-subtitle {
+        font-size: 16px;
+    }
+    &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        width: 40%;
+        height: 100vh;
+        padding-top: 13.8rem;
+        // margin-right:203px ;
+    }
+    &-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 100vh;
+        background: $tan;
+        &__title {
+            font-family: $poppins-semi;
+        }
+    }
 }

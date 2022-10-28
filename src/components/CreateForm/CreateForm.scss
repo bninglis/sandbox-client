@@ -2,57 +2,62 @@
 @use "../../styles/_partials/typography" as *;
 
 input {
-  font-family: $poppins-reg;
-  font-size: 20px;
-  color: #4e4e4e;
-  background-color: $tan;
-  border: 1px solid #1e1e1e;
-  border-radius: 10px;
-  padding: 15px 20px;
+    font-family: $poppins-reg;
+    font-size: 20px;
+    color: #4e4e4e;
+    background-color: $tan;
+    border: 1px solid #1e1e1e;
+    border-radius: 10px;
+    padding: 15px 20px;
 }
 button {
-  font-family: $poppins-reg;
-  font-size: 20px;
-  color: white;
-  background: $red;
-  border-radius: 10px;
-  border: none;
-  padding: 13px 0;
+    font-family: $poppins-reg;
+    font-size: 20px;
+    color: white;
+    background: $red;
+    border-radius: 10px;
+    border: none;
+    padding: 13px 0;
 }
 .create {
-  width: 40rem;
+    width: 58.5rem;
 
-  &__check {
-    width: 1rem;
-  }
-  &__names {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__digital {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__check {
-    display: inline-block;
-  }
-  &__submit {
-    margin: 1rem;
-    width: 96%;
-  }
-  &__field {
-    margin: 1rem;
-    &-top {
-      width: 268px;
+    &__check {
+        width: 1rem;
     }
-    &-middle {
-      display: flex;
-      flex-direction: column;
+    &__names {
+        display: flex;
+        justify-content: space-between;
     }
-    &-bottom {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    &__digital {
+        display: flex;
+        justify-content: space-between;
     }
-  }
+    &__check {
+        display: inline-block;
+    }
+    &__submit {
+        margin: 1rem;
+        width: 96%;
+    }
+    &__field {
+        margin: 1rem;
+        &--top {
+          width: 50%;
+        }
+        &--middle {
+            display: flex;
+            flex-direction: column;
+        }
+        &--bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
 }
