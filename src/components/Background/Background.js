@@ -70,7 +70,7 @@ export default function Background() {
                                 </div>
                             </div>
                         </div>
-                        <div class="followup__zone">
+                        <div className="followup__zone">
                             <button className="followup__submit" type="submit">
                                 Next
                             </button>

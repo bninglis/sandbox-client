@@ -1,6 +1,7 @@
 import FormProgressPrefs from "../FormProgressPrefs/FormProgressPrefs";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../Header/Header";
 
 const checkedDefault = { messaging: false, video: false, voice: false, irl: false, scheduled: false, spontaneous: false };
 
@@ -50,9 +51,13 @@ export default function Preferences() {
     };
     return (
         <>
+            <Header />
             <div className="page__container">
                 <div className="page">
-                    <h1 className="followup__title">Preferences</h1>
+                    <div className="progress__container">
+                        <FormProgressPrefs />
+                    </div>
+                    <h1 className="followup__title pref-title">Preferences</h1>
                     <form className="preferences" onSubmit={handleSubmit}>
                         <div className="preferences__input">
                             <div className="preferences__fields">
@@ -86,9 +91,11 @@ export default function Preferences() {
                                 </label>
                             </div>
                         </div>
-                        <button className="followup__submit" type="submit">
-                            Submit
-                        </button>
+                        <div className="followup__zone">
+                            <button className="followup__submit" type="submit">
+                                Submit
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

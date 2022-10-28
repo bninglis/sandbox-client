@@ -92,3 +92,14 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
+
+.preferences {
+    &__fields{
+        margin-bottom: 1.4rem;
+    }
+}
+
+.pref-title {
+    margin-top: 6.5rem;
+    margin-bottom: 1.4rem;
+}

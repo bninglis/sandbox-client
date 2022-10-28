@@ -29,7 +29,7 @@ export default function Interests() {
             setIsFormValid(true);
             const interestsOutput = selected.join(", ");
             sessionStorage.setItem("interests", interestsOutput);
-            navigate("/recommendations");
+            navigate("/preferences");
         } else {
             setIsFormValid(false);
         }
