@@ -1,6 +1,8 @@
 import "./Interests.scss";
 import FormProgressInterests from "../FormProgressInterests/FormProgressInterests";
 import { useState } from "react";
+import Header from "../Header/Header";
+import { useNavigate } from "react-router-dom";
 
 const artInterestArray = { title: "Arts", array: ["Crafts", "Dance", "Drawing", "Painting", "Photography", "Singing"] };
 const businessInterestArray = { title: "Business & Industry", array: ["Advertising", "Design", "Engineering", "Marketing", "Real Estate", "Sales"] };
@@ -18,9 +20,7 @@ const techInterestArray = { title: "Technology", array: ["Audio Devices", "Camer
 const topics = [artInterestArray, businessInterestArray, entertainmentInterestArray, relationshipsInterestArray, fitnessInterestArray, homeInterestArray, lifestyleInterestArray, outdoorsInterestArray, petsInterestArray, fashionInterestArray, sportInterestArray, techInterestArray];
 
 export default function Interests() {
-    function findCommonElements(arr1, arr2) {
-        return arr1.some((item) => arr2.includes(item));
-    }
+    const navigate = useNavigate();
 
     const [selected, setSelected] = useState([]);
     const [isFormValid, setIsFormValid] = useState();
@@ -28,7 +28,8 @@ export default function Interests() {
         if (selected.length > 0) {
             setIsFormValid(true);
             const interestsOutput = selected.join(", ");
-            sessionStorage.setItem(interestsOutput);
+            sessionStorage.setItem("interests", interestsOutput);
+            navigate("/recommendations");
         } else {
             setIsFormValid(false);
         }
@@ -42,31 +43,42 @@ export default function Interests() {
             updatedList.splice(selected.indexOf(interest), 1);
         }
         setSelected(updatedList);
-        console.log(isSelected());
     };
-    const isSelected = (item) => (selected.includes(item) ? "checked-item" : "not-checked-item");
+    const isSelected = (item) => (selected.includes(item) ? "selected-item" : "not-selected-item");
     return (
         <>
-            <h1 className="followup__title">Interests</h1>
-            {topics.map((list, index) => {
-                return (
-                    <div key={list.title} className="interests__group">
-                        <h2 className="interests__subheader">{topics[index].title}</h2>
-                        <div className="interests__container">
-                            {topics[index].array.map((interest, listIndex) => {
-                                return (
-                                    <button key={`${interest}${index}`} className={`interest__item ${isSelected(interest)}`} onClick={(event) => handleInterest(event, interest)}>
-                                        {interest}
-                                    </button>
-                                );
-                            })}
-                        </div>
+            <Header />
+            <div className="page__container">
+                <div className="page">
+                    <div className="progress__container">
+                        <FormProgressInterests />
                     </div>
-                );
-            })}
-            <button className="followup__submit" onClick={handleClick}>
-                Next
-            </button>
+                    <h1 className="followup__title">Interests</h1>
+                    <main>
+                        {topics.map((list, index) => {
+                            return (
+                                <div key={list.title} className="interests">
+                                    <h2 className="interests__subheader">{topics[index].title}</h2>
+                                    <div className="interests__container">
+                                        {topics[index].array.map((interest, listIndex) => {
+                                            return (
+                                                <button key={`${interest}${index}`} className={`interests__item ${isSelected(interest)}`} onClick={(event) => handleInterest(event, interest)}>
+                                                    {interest}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                        <div className="followup__zone">
+                            <button className="followup__submit" onClick={handleClick}>
+                                Next
+                            </button>
+                        </div>
+                    </main>
+                </div>
+            </div>
         </>
     );
 }

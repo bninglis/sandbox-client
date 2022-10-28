@@ -1,5 +1,4 @@
 import "./App.scss";
-import CreateForm from "./components/CreateForm/CreateForm";
 import Background from "./components/Background/Background";
 import Recommendations from "./components/Recommendations/Recommendations";
 import Interests from "./components/Interests/Interests";
@@ -12,7 +11,7 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Background />} />
+                    <Route path="/" element={<SignupPage />} />
                     <Route path="/background-info" element={<Background />} />
                     <Route path="/interests" element={<Interests />} />
                     <Route path="/preferences" element={<Preferences />} />
