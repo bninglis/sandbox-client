@@ -1,0 +1,26 @@
+@use "../../styles/styles";
+
+.progress {
+    width: 35rem;
+    display: flex;
+    align-items: center;
+    &__track{
+        background-color: lightgray;
+        height: 1rem;
+    }
+    &__thumb{
+        height: 3rem;
+        width: 3rem;
+        background-color: darkgray;
+    }
+    &__mark{
+        height: 3rem;
+        width: 3rem;
+        background-color: gray;
+    }
+    &__container{
+        min-height: 3rem;
+        display: flex;
+        align-items: center;
+    }
+}
